@@ -1,0 +1,73 @@
+class Personaje
+class MarcoRossi
+class TarmaRoving
+class EriKasamoto
+class FioGermi
+class ClarkStill
+class RalfJones
+class TrevorSpacey
+class NadiaCassel
+class LeonaHeiden
+class WalterRian
+class SoldadoRebelde
+class Momia
+class Pistola
+class Ametralladora
+class Granada
+class Tanque
+class Jeep
+class Helicoptero
+class Vida
+class Escopeta
+class Lanzallamas
+class Cuchillo
+class CamelSlug
+class SlugMariner
+class PrisioneroDeGuerra
+class GeneralMorden
+class AllenONeil
+class CajaDeSuministros
+class Puntaje
+class Comida
+MarcoRossi --|> Personaje
+TarmaRoving --|> Personaje
+EriKasamoto --|> Personaje
+FioGermi --|> Personaje
+ClarkStill --|> Personaje
+RalfJones --|> Personaje
+TrevorSpacey --|> Personaje
+NadiaCassel --|> Personaje
+LeonaHeiden --|> Personaje
+WalterRian --|> Personaje
+SoldadoRebelde --|> Personaje
+Momia --|> Personaje
+PrisioneroDeGuerra --|> Personaje
+GeneralMorden --|> Personaje
+AllenONeil --|> Personaje
+
+    MarcoRossi "1" *--> "5" Vida
+    TarmaRoving "1" *--> "5" Vida
+    EriKasamoto "1" *--> "5" Vida
+    FioGermi "1" *--> "5" Vida
+    SoldadoRebelde "1" *--> "1" Vida
+    MarcoRossi "1" *--> "1" Puntaje
+
+    MarcoRossi "1" o--> "1" Pistola
+    TarmaRoving "1" o--> "1" Escopeta
+    EriKasamoto "1" o--> "1" Granada
+    FioGermi "1" o--> "1" Ametralladora
+    TrevorSpacey "1" o--> "1" Cuchillo
+    NadiaCassel "1" o--> "1" Lanzallamas
+    MarcoRossi "1" o--> "0..1" Tanque
+    TarmaRoving "1" o--> "0..1" Jeep
+    EriKasamoto "1" o--> "0..1" Helicoptero
+    FioGermi "1" o--> "0..1" CamelSlug
+    LeonaHeiden "1" o--> "0..1" SlugMariner
+    WalterRian "1" o--> "1" CajaDeSuministros
+    PrisioneroDeGuerra "1" o--> "0..*" Comida
+    GeneralMorden "1" o--> "1" Helicoptero
+    AllenONeil "1" o--> "1" Ametralladora
+    Momia "1" o--> "1" Granada
+    RalfJones "1" o--> "1" Pistola
+    ClarkStill "1" o--> "1" Pistola
+    SoldadoRebelde "1" o--> "0..1" Jeep
