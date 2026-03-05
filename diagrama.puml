@@ -72,20 +72,30 @@ AllenONeil --|> Personaje
     ClarkStill "1" o--> "1" Pistola
     SoldadoRebelde "1" o--> "0..1" Jeep
 
+
 interface IAtacante {
-    + atacar(): 
+    + atacar()
 }
 
-class Personaje {
-    + atacar():
+interface IArma {
+    + disparar()
+    + recargar()
 }
 
-Personaje ..|> IAtacante
+interface IVehiculo {
+    + conducir()
+    + recibirDanio()
+}
+
+interface IItem {
+    + serRecolectado()
+}
 
 class Memoria {
-    + guardarPartida() : Boolean
-    + cargarPartida() : Boolean
+    + guardarPartida()
+    + cargarPartida()
 }
+
 -*
 MarcoRossi "1" --> "1" Memoria : tiene
 Personaje "1" --> "0..1" IArma : usa
